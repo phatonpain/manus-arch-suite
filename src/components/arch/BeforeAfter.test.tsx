@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { render, screen, cleanup } from '@testing-library/react';
+import { describe, it, expect, afterEach } from 'vitest';
 import { BeforeAfter } from './BeforeAfter';
+
+afterEach(cleanup);
 
 describe('BeforeAfter Component', () => {
   it('renders before and after labels correctly', () => {
